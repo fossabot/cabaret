@@ -1,0 +1,29 @@
+.page-header {
+  position: relative;
+  margin: 3.5rem;
+  padding: 0;
+  border: none;
+
+  /* === Title === */
+  &__title {
+    float: left;
+    clear: left;
+    // font-size: rem($base-height);
+    // color: $sf-slate-dark;
+    // @include gotham-narrow-200;
+    margin: 0 1rem 0 0;
+    line-height: 1;
+  }
+
+  /* === Description === */
+  &__description {
+    float: left;
+    clear: left;
+    // color:  $sf-slate-light;
+    font-size: rem(16px);
+    // @include gotham-narrow-200;
+    line-height: 24px;
+    margin: 0 auto;
+    max-width: 35rem;
+  }
+}

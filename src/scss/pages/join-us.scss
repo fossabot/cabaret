@@ -1,0 +1,44 @@
+.join-us-page {
+  height: 100%;
+
+  @include media-breakpoint-up(lg) {
+    background: fixed url('/img/bg-dark.jpg') no-repeat center;
+    background-size: cover;
+  }
+
+  &__box {
+    border: 1px solid $pink;
+    padding: 30px;
+    margin-bottom: 30px;
+  }
+
+  li {
+    margin-bottom: 20px;
+  }
+
+  ol {
+    list-style: none;
+    counter-reset: section;
+
+    li {
+      position: relative;
+    }
+
+    li:before {
+      counter-increment: section;
+      content: counter(section);
+      position: absolute;
+      display: inline-block;
+      text-align: center;
+      top: 50%;
+      margin-top: -12px;
+      margin-left: -40px;
+      width: 24px;
+      height: 24px;
+      font-weight: bold;
+      background: $pink;
+      border-radius: 50%;
+      clear: both;
+    }
+  }
+}
