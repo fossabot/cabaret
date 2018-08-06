@@ -91,9 +91,9 @@ const cities = [
 */}
 
 
-export const JoinForm = (props) => {
+  export const JoinForm = (props) => {
   return (
-    <Form>
+    <Form url="/" name="join-us">
       {/* Basic Info */}
       <Form.Legend>Informações Básicas</Form.Legend>
 

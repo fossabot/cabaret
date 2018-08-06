@@ -16,20 +16,28 @@ export default class Form extends Component {
   }
 
   handleSubmit = e => {
-    e.preventDefault();
-    const { url, name, action } = this.props;
+    const {
+      url = null,
+      name = null,
+      action = null
+    } = this.props;
+
     const form = e.target;
-    console.log(form);
-    return;
+    e.preventDefault();
+    console.log(form, this.state);
+
+    // return;
     fetch(url, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({
-        'form-name': name,
-        ...this.state
-      })
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/x-www-form-urlencoded'
+      },
+      body: new FormData(form)
     })
-      .then(() => navigateTo(action))
+      .then(() => {
+        if (action) navigateTo(action);
+      })
       .catch(error => console.error(error));
   }
 
