@@ -3,6 +3,8 @@ import Link from 'gatsby-link';
 import { Grid, Row, Col } from '../../components/Elements/Grid';
 import Page from '../../components/Elements/Page/Page';
 import TitleAndMetaTags from '../../components/TitleAndMetaTags';
+import Icon from '../../components/Elements/Icon/Icon';
+
 
 const JoinUs = () => (
   <Page className="join-us-page">
@@ -14,10 +16,19 @@ const JoinUs = () => (
           <p><strong>Interessada em anunciar como Acompanhante de Luxo?</strong></p>
           <p>Você já possui um talento e beleza únicos, apenas ainda não faz parte do nosso club.</p>
 
-          <p>PROMOÇÃO DE LANÇAMENTO: ANÚNCIOS GRÁTIS POR 15 DIAS COM SEU NÚMERO DE TELEFONE!</p>
+          <p>Tenha seu Anúncio Grátis durante 6 meses!</p>
 
-          <p>Clique aqui e envie um Whatsapp agora mesmo.</p>
+          <p>Tenha seu Anúncio Grátis durante 1 ano!</p>
+
+          <p>
+            <a href="#">
+              <Icon
+                name="whatsapp"
+              /> Clique aqui e envie um Whatsapp agora mesmo.
+            </a>
+          </p>
         </Col>
+
         <Col className="join-us-page__box" md={8}>
           <h2 className="text-center">O que você precisa para anunciar?</h2>
           <ol>

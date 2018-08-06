@@ -9,6 +9,7 @@
     "classnames": "^2.2.6",
     "dateformat": "^3.0.3",
     "extensible-runtime": "^4.1.0",
+    "font-awesome": "^4.7.0",
     "gatsby": "^1.9.251",
     "gatsby-link": "^1.6.40",
     "gatsby-plugin-catch-links": "^1.0.19",
@@ -24,6 +25,7 @@
     "lodash": "^4.17.5",
     "moment": "^2.22.2",
     "react-bootstrap": "^0.32.1",
+    "react-fontawesome": "^1.6.1",
     "react-helmet": "^5.2.0",
     "react-scroll-to-element": "^0.2.0",
     "react-text-mask": "^5.4.3"

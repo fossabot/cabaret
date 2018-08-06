@@ -55,42 +55,6 @@ const cities = [
   */
 ];
 
-{/* PAGE DATA
-  BANNER
-  - Foto
-  - Name
-  - Tel
-  - Ao ligar para ela, diga que viu o anúncio no Cabare Club
-  SIDEBAR
-  - Tel
-  - Ao ligar para ela, diga que viu o anúncio no Cabare Club
-  - Social links
-  - Perfil
-    - Idade
-    - Peso
-    - Altura
-    - Medidas
-    - Olhos
-    - Cabelo
-  - O que faz
-    - ...
-  - Atendimento
-    - Atende
-    - Locais
-    - Regiões
-  - Pagamento
-    - Cache
-    - Forma de Pagamento
-  GALLERY
-  VIDEO
-  ABOUT
-  - Title: Name + Acompanhante em + Cidade
-  - Description
-  COMMENTS
-  TAGS
-*/}
-
-
   export const JoinForm = (props) => {
   return (
     <Form url="/" name="join-us">

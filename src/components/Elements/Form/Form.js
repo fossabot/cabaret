@@ -5,6 +5,12 @@ import { navigateTo } from "gatsby-link";
 import Legend from './Legend';
 import HelpBlock from './HelpBlock';
 
+function encode(data) {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&");
+}
+
 export default class Form extends Component {
   constructor(props) {
     super(props);
@@ -33,7 +39,7 @@ export default class Form extends Component {
         'Accept': 'application/json',
         'Content-Type': 'application/x-www-form-urlencoded'
       },
-      body: new FormData(form)
+      body: encode(form)
     })
       .then(() => {
         if (action) navigateTo(action);

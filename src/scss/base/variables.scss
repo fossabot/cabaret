@@ -1,9 +1,25 @@
 $white: #ffffff;
 $gray: #a0a0a0;
-// $gray: #666470;
+$gray2: #666470;
 $black: #1a191f;
+$black2: #0d0d0d;
+$black3: #222;
 $red: #E82D42;
-$pink: #e0006c;
 $red-2: #B02635;
+$pink: #e0006c;
+$purple: #b800e0;
 
+// Color definition
+$text-color: $gray;
+$heading-color: $white;
 $background-color: $black;
+$background-dark: $black2;
+$link-color: $pink;
+$border-color: $pink;
+$border-color-input: rgba(255, 255, 255, 0.1);
+
+// Spacing
+$spacing-xs: 8px;
+$spacing-sm: 16px;
+$spacing-md: 32px;
+$spacing-lg: 48px;
