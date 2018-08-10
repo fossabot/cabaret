@@ -1,14 +1,16 @@
+const APP_LAUNCH_DATE = process.env.APP_LAUNCH_DATE || "2018-10-1";
+
 module.exports = {
   siteMetadata: {
     title: 'Cabare Club',
     siteUrl: 'https://cabareclub.com.br',
-    launchDate: '2018-10-1',
+    launchDate: APP_LAUNCH_DATE,
   },
   pathPrefix: '/',
   plugins: [
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sass',
-    'gatsby-plugin-purify-css',
+    // 'gatsby-plugin-purify-css',
     'gatsby-plugin-react-next',
     'gatsby-plugin-lodash',
     'gatsby-plugin-catch-links',
