@@ -1,6 +1,6 @@
 import React from 'react'
 import { Grid, Row, Col } from '../../Elements/Grid'
-import Scroll from 'react-scroll-to-element'
+// import Scroll from 'react-scroll-to-element'
 
 import Countdown from '../../Countdown'
 import downArrow from '../../../../static/svgs/arrow.svg'
@@ -20,11 +20,11 @@ const BannerSection = ({datetime}) => (
           <Countdown datetime={datetime} />
         </Col>
         <Col md={6} className="align-self-end text-center">
-          <Scroll type="class" element="landing__about-section">
+          {/*<Scroll type="class" element="landing__about-section">*/}
             <button className="btn">
               <img src={downArrow} />
             </button>
-          </Scroll>
+          {/*</Scroll>*/}
         </Col>
       </Row>
     </Grid>

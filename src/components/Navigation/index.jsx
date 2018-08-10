@@ -2,6 +2,11 @@ import React, { Component } from 'react';
 import { Nav, NavItem, NavDropdown, MenuItem } from 'react-bootstrap';
 import cx from 'classnames';
 
+let loc = {};
+if (typeof window !== `undefined`) {
+  loc = location
+}
+
 const links = [
   {
     label: 'Nossas Gatas',
@@ -33,11 +38,9 @@ const links = [
 export default class Navigation extends Component {
   getNavItemClass = (path) => {
     return cx('nav-item', {
-      active: location.pathname === path
+      active: loc.pathname === path
     });
   }
-
-  isActive = (path) => location.pathname === path;
 
   renderLink = (link, key) => {
     return (

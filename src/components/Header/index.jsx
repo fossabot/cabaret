@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Link from '../Elements/Link/Link';
-import Navigation from '../Navigation';
+// import Navigation from '../Navigation';
 
 class Header extends Component {
   render() {
@@ -13,7 +13,7 @@ class Header extends Component {
               <img src="/img/logo.png" width="120" alt="Cabaret Acompanhantes de Luxo." />
             </h1>
           </Link>
-          <Navigation />
+          {/*<Navigation />*/}
         </div>
       </header>
     )
