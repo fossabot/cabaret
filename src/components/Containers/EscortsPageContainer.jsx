@@ -5,15 +5,12 @@ import Page from '../Elements/Page/Page';
 import { Grid, Row, Col } from '../Elements/Grid';
 import Profile from '../Elements/Profile/Profile';
 import getProfileData from '../../utils/getProfileData';
+import BannerWithProfiles from '../Composites/BannerWithProfiles/BannerWithProfiles';
 
 const EscortsPageContainer = ({ escorts }) => (
   <Page>
     {console.log('escorts', escorts)}
-    <Grid fluid>
-      <Row style={ {background: 'gray', height: '480px'} }>
-        Banner
-      </Row>
-    </Grid>
+    <BannerWithProfiles />
     <Grid>
       <Row>
         <Col sm={12}>
