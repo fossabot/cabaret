@@ -1,9 +1,11 @@
 import React from 'react';
-import Header from './Header/Header'
 import cx from 'classnames';
 
+import Header from './Header/PageHeader'
+import './Page.scss';
+
 const Page = (props) => {
-  const { children, className } = props;
+  const { children, className = null } = props;
   const classNames = cx('page', className);
   return (
     <div className={classNames}>

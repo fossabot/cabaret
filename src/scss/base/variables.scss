@@ -1,15 +1,25 @@
+
+/**
+ * Colors
+ */
+
+/* Grayscale */
 $white: #ffffff;
 $gray: #a0a0a0;
 $gray2: #666470;
 $black: #1a191f;
 $black2: #0d0d0d;
 $black3: #222;
+
+/* Primary */
 $red: #E82D42;
 $red-2: #B02635;
 $pink: #e0006c;
 $purple: #b800e0;
 
-// Color definition
+/* Secundary */
+
+/* Color definition */
 $text-color: $gray;
 $heading-color: $white;
 $background-color: $black;
@@ -18,8 +28,31 @@ $link-color: $pink;
 $border-color: $pink;
 $border-color-input: rgba(255, 255, 255, 0.1);
 
-// Spacing
-$spacing-xs: 8px;
-$spacing-sm: 16px;
-$spacing-md: 32px;
-$spacing-lg: 48px;
+/**
+ * Typography
+ */
+$heading-family: 'Oswald', 'sans-serif';
+$font-family: 'Roboto', 'sans-serif';
+
+$font-size-h1: 2.25rem; // 36px
+$font-size-h2: 2.0625rem; // 33px
+$font-size-h3: 1.875rem; // 30px
+$font-size-h4: 1.75rem; // 28px
+$font-size-h5: 1.625rem; // 26px
+$font-size-h6: 1.375rem; // 22px
+
+$font-size-lg: 1.125rem; // 18px
+$font-size-md: 16px; // Base size
+$font-size-sm: 0.875rem; // 14px
+$font-size-xs: 0.687rem; // 11px
+
+$base-size: $font-size-md;
+$base-line-height: $font-size-lg;
+
+/**
+ * Spacing
+ */
+$spacing-xs: 0.5rem; // 8px
+$spacing-sm: 1rem; // 16px
+$spacing-md: 2rem; // 32px
+$spacing-lg: 3rem; // 48px

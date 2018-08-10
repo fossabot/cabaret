@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
-import Link from 'gatsby-link'
+import Link from 'gatsby-link';
+
+import './Footer.scss';
 
 const footerNavigation = [
   {path: '/', label: 'Inicio'},

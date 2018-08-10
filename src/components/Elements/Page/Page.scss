@@ -1,0 +1,11 @@
+@import '../../../scss/base/variables.scss';
+
+.page {
+  padding-bottom: 6rem;
+
+  &__title {}
+
+  &__subtitle {
+    text-transform: uppercase;
+  }
+}

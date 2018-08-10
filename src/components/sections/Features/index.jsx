@@ -3,7 +3,7 @@ import { Grid, Row, Col } from '../../Elements/Grid'
 import Title from '../../Elements/Title'
 
 const ResponsiveSection = () => (
-  <section className="landing__main-section features">
+  <section className="landing__features-section features">
     <Grid>
       <Row>
         <Col md={6}>

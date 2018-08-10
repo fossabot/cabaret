@@ -16,7 +16,7 @@ function(e, t, n) {
       },
       removeUser: function () {
         r.a.erase(i, {
-          domain: ".grizzlyapp.com"
+          domain: ".cabareclub.com.br"
         })
       }
     };

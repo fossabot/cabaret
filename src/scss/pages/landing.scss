@@ -3,3 +3,124 @@
     margin-bottom: 40px;
   }
 }
+
+//====================
+//      SECTIONS
+//====================
+
+// .section {
+//   padding: 80px 0;
+//   margin: 0;
+//   min-height: 600px;
+
+//   &--default {
+//     padding: 0;
+//     min-height: auto;
+//   }
+
+//   &--white {
+//     background: #fff;
+//     color: $black;
+//   }
+// }
+
+.landing__about-section,
+.landing__newsletter-section,
+.landing__device-section,
+.landing__join-us-section {
+  padding: 80px 0;
+  margin: 0;
+  min-height: 480px;
+
+  @include media-breakpoint-up(md) {
+    min-height: 600px;
+  }
+}
+
+
+/**
+* Section: Banner
+*/
+.landing__banner-section {
+  position: relative;
+  background: url('/img/bg-grid.jpg') no-repeat center left;
+  background-size: 80vw auto;
+  height: 100vh;
+
+  &:after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 3px;
+    bottom: 0;
+    background: linear-gradient(to right, #fd61e3, #fd61e3 50%, #ff77b8);
+  }
+
+  @include media-breakpoint-up(lg) {
+    background: fixed url('/img/bg-intro.jpg') no-repeat center center;
+    background-size: contain;
+  }
+
+  .row {
+    min-height: 480px;
+
+    @include media-breakpoint-up(md) {
+      min-height: 600px;
+      height: calc(100vh - 48px);
+    }
+  }
+
+  button{
+    transition: opacity 300ms ease;
+    opacity: .5;
+    background: none !important;
+
+    &:hover, &:focus {
+      opacity: 1;
+    }
+
+  }
+}
+
+/**
+* Section: About
+*/
+.landing__about-section {
+  @include media-breakpoint-up(lg) {
+    background: url('/img/bg-mobile.jpg') no-repeat right center;
+    background-size: 50vw auto;
+  }
+
+}
+
+/**
+* Section: Quick Newsletter
+*/
+.landing__newsletter-section {
+  @include media-breakpoint-up(lg) {
+    background: url('/img/bg-grid.jpg') no-repeat center left;
+    background-size: 30vw auto;
+  }
+}
+
+/**
+* Section: Features
+*/
+.landing__features-section {
+  padding: 80px 0;
+}
+
+/**
+* Section: Join us
+*/
+.landing__join-us-section {
+  @include media-breakpoint-up(lg) {
+    background: fixed url('/img/bg-join.jpg') no-repeat center center;
+    background-size: cover;
+  }
+
+  .row {
+    min-height: 600px;
+  }
+}

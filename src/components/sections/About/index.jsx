@@ -3,7 +3,7 @@ import { Grid, Row, Col } from '../../Elements/Grid'
 import Title from '../../Elements/Title'
 
 const AboutSection = () => (
-  <section className="section landing__about-section">
+  <section className="landing__about-section">
     <Grid>
       <Row>
         <Col md={6}>

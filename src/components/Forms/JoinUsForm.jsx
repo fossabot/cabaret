@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Row, Col } from '../../components/Elements/Grid';
+import { Row, Col } from '../Elements/Grid';
 import Form from '../Elements/Form/Form';
 import Input from '../Elements/Form/Fields/Input';
 import TextArea from '../Elements/Form/Fields/TextArea';

@@ -2,7 +2,7 @@ import React from 'react'
 import { Grid, Row, Col } from '../../Elements/Grid'
 
 const ResponsiveSection = () => (
-  <section className="landing__main-section landing__device-section">
+  <section className="landing__device-section">
     <Grid>
       <h2>Acesse o SITE de qualquer dispositivo</h2>
       <p>Acesse de onde e como quiser!</p>

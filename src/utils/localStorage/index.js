@@ -3,10 +3,10 @@ function(e, t, n) {
   (function (e) {
     var o = (n("./node_modules/localStorage/lib/localStorage.js"), void 0);
     e.process, o = e.window.localStorage;
-    var r = "grizzlyAppUser",
-      i = "grizzlyDeviceId",
-      s = "grizzlyWelcomeTutorialSeen",
-      a = "grizzlyAnnouncementSeen",
+    var r = "CabareAppUser",
+      i = "CabareDeviceId",
+      s = "CabareWelcomeTutorialSeen",
+      a = "CabareAnnouncementSeen",
       u = {
         setUser: function (e) {
           o.setItem(r, JSON.stringify(e))

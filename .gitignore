@@ -1,7 +1,34 @@
-# Project dependencies
-.cache
+# Dependency directory
 node_modules
-yarn-error.log
 
-# Build directory
-/public
+# Bower dependency directory (https://bower.io/)
+bower_components
+
+# OSX
+.DS_Store
+
+# App packaged
+.cache
+public
+
+# Coverage directory used by tools like istanbul
+coverage
+
+# nyc test coverage
+.nyc_output
+
+# Optional eslint cache
+.eslintcache
+
+# dotenv environment variables file
+.env
+
+# vscode
+.vscode
+
+# log
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

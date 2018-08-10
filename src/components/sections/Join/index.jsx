@@ -4,7 +4,7 @@ import Title from '../../Elements/Title';
 import Link from 'gatsby-link'
 
 const ResponsiveSection = () => (
-  <section className="section landing__join-us">
+  <section className="landing__join-us-section">
     <Grid>
       <Row className="justify-content-sm-center">
         <Col md={6} className="text-center">
