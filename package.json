@@ -40,12 +40,15 @@
     "develop": "gatsby develop",
     "diff": "prettier --config .prettierrc --list-different 'src/**/*.js'",
     "format": "prettier --config .prettierrc --write 'src/**/*.js'",
-    "test": "eslint .",
+    "test": "eslint src",
     "precommit": "lint-staged",
     "prepush": "yarn test"
   },
   "lint-staged": {
-    "*.{js,jsx}": ["prettier --config .prettierrc --write", "git add"]
+    "*.{js,jsx}": [
+      "prettier --config .prettierrc --write",
+      "git add"
+    ]
   },
   "devDependencies": {
     "babel-eslint": "^8.2.6",

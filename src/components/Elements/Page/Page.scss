@@ -1,11 +1,19 @@
 @import '../../../scss/base/variables.scss';
 
 .page {
-  padding-bottom: 6rem;
+  padding-bottom: 8rem;
 
   &__title {}
 
   &__subtitle {
+    margin: 0;
+    padding: $spacing-md 0;
     text-transform: uppercase;
+    color: $pink;
+
+    strong {
+      font-weight: inherit;
+      color: $white;
+    }
   }
 }

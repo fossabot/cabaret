@@ -1,10 +1,8 @@
-const APP_LAUNCH_DATE = process.env.APP_LAUNCH_DATE || "2018-10-1";
-
 module.exports = {
   siteMetadata: {
     title: 'Cabare Club',
     siteUrl: 'https://cabareclub.com.br',
-    launchDate: APP_LAUNCH_DATE,
+    launchDate: process.env.APP_LAUNCH_DATE || '2018-10-1',
   },
   pathPrefix: '/',
   plugins: [
@@ -18,19 +16,27 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-google-fonts',
       options: {
-        fonts: ['Roboto', 'Lato', 'Oswald']
-      }
+        fonts: ['Roboto', 'Lato', 'Oswald'],
+      },
     },
     {
       resolve: 'gatsby-plugin-nprogress',
       options: {
-        color: '#9D7CBF',
-        showSpinner: false,
+        color: '#E82D42',
+        // showSpinner: false,
       },
     },
     {
       resolve: 'gatsby-plugin-google-analytics',
-      options: { trackingId: 'UA-000000-01' }
+      options: {
+        trackingId: process.env.APP_GA_ID || 'UA-000000-01',
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-canonical-urls',
+      options: {
+        siteUrl: `https://www.example.com`,
+      },
     },
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
@@ -64,6 +70,8 @@ module.exports = {
         orientation: 'portrait',
         icon: './src/assets/images/logo.png', // This path is relative to the root of the site.
       },
-    }
+    },
+    // 'gatsby-plugin-netlify-cms',
+    // 'gatsby-plugin-netlify'
   ],
-};
+}

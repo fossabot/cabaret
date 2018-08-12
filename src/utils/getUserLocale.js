@@ -1,12 +1,10 @@
 import withQuery from 'with-query'
 
-export const getUsers = async id => {
+export const getUsers = async (id) => {
   try {
+    /* eslint-disable */
     const resp = await fetch(
-      withQuery(
-        'https://my-json-server.typicode.com/kristof0425/hacktoberfest-2017/users',
-        id
-      ),
+      withQuery('https://my-json-server.typicode.com/kristof0425/hacktoberfest-2017/users', id),
       {
         method: 'GET',
         'Content-Type': 'application/json',

@@ -1,31 +1,56 @@
-import React, { Component } from 'react';
-// import OwlCarousel from 'react-owl-carousel';
-// import 'owl.carousel/dist/assets/owl.carousel.css';
-// import 'owl.carousel/dist/assets/owl.theme.default.css';
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
+import OwlCarousel from 'react-owl-carousel'
 
-import { Grid, Row, Col } from '../../Elements/Grid';
-import Profile from '../../Elements/Profile/Profile';
-import getProfileData from '../../../utils/getProfileData';
+import { Grid, Row, Col } from '../../Elements/Grid'
+import Slider from '../../Slider/Slider'
+import Profile from '../../Elements/Profile/Profile'
 
-import './BannerWithProfiles.scss';
+import './BannerWithProfiles.scss'
+
+const classPrefix = 'banner-profile'
 
 export default class BannerWithProfiles extends Component {
+  static propTypes = {
+    items: PropTypes.array.isRequired,
+  }
+
+  renderSlider = () => {
+    const slides = this.renderSlides()
+
+    const responsive = {
+      0: {
+        items: 1,
+        dots: false,
+      },
+
+      576: {
+        items: 3,
+      },
+
+      992: {
+        items: 5,
+      },
+    }
+
+    return <Slider loop nav lazyLoad slides={slides} responsive={responsive} />
+  }
+
   renderSlides = () => {
-    return getProfileData(6).map((item, index) => {
+    const { items } = this.props
+    return items.map((item, index) => {
       return (
-        <Col className="col banner-profile__item" key={index}>
-          <Profile profile={item} />
+        <Col className={`col ${classPrefix}__item`} key={index}>
+          <Profile slider profile={item} />
         </Col>
-      );
-    });
+      )
+    })
   }
   render() {
     return (
-      <Grid fluid className="banner-profile">
-        <Row className="banner-profile__carousel">
-          {this.renderSlides()}
-        </Row>
+      <Grid fluid className={classPrefix}>
+        <Row className={`${classPrefix}__carousel`}>{this.renderSlider()}</Row>
       </Grid>
-    );
+    )
   }
 }

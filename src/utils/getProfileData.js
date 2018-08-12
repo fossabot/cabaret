@@ -1,4 +1,6 @@
-const devMode = process.env.NODE_ENV === 'development'
+import { env } from 'process'
+
+const devMode = env.NODE_ENV !== 'production'
 
 const placeholder = 'http://placehold.it/362x536'
 
@@ -37,17 +39,18 @@ const getProfileUrl = () => {
 
 const getBool = () => !!Math.floor(Math.random() * 2)
 
-const changeCase = name => name.toLowerCase().replace(' ', '-')
+const changeCase = (name) => name.toLowerCase().replace(' ', '-')
 
 export default (amount = 8) => {
   const arr = new Array(amount)
   const mock = []
 
+  /* eslint-disable */
   for (let i of arr) {
     mock.push(getProfileName())
   }
 
-  return mock.map(name => {
+  return mock.map((name) => {
     return {
       name,
       cover: getProfileUrl(),
