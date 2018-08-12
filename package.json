@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-starter-default",
-  "description": "Gatsby default starter",
+  "name": "cabare-club-website",
+  "description": "Cabare Club Website",
   "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Rafaell Lycan <sonny.webdsg@gmail.com>",
   "dependencies": {
     "bootstrap": "^4.1.0",
     "bootstrap-material-design": "^4.1.1",
@@ -10,12 +10,15 @@
     "font-awesome": "^4.7.0",
     "gatsby": "^1.9.251",
     "gatsby-link": "^1.6.40",
+    "gatsby-plugin-canonical-urls": "^1.0.18",
     "gatsby-plugin-catch-links": "^1.0.19",
     "gatsby-plugin-favicon": "^3.1.2",
     "gatsby-plugin-google-analytics": "^1.0.30",
     "gatsby-plugin-google-fonts": "^0.0.4",
     "gatsby-plugin-lodash": "^1.0.11",
     "gatsby-plugin-manifest": "^1.0.27",
+    "gatsby-plugin-netlify": "^1.0.21",
+    "gatsby-plugin-netlify-cms": "^2.0.1",
     "gatsby-plugin-nprogress": "^1.0.14",
     "gatsby-plugin-purify-css": "^2.2.1",
     "gatsby-plugin-react-helmet": "^2.0.8",
@@ -24,23 +27,37 @@
     "gatsby-plugin-sharp": "^1.6.48",
     "gatsby-plugin-sitemap": "^1.2.20",
     "gatsby-transformer-sharp": "^1.6.27",
+    "jquery": "^3.3.1",
+    "netlify-cms": "^2.0.9",
     "react-bootstrap": "^0.32.1",
     "react-fontawesome": "^1.6.1",
     "react-helmet": "^5.2.0",
     "react-owl-carousel": "^2.3.1",
     "react-text-mask": "^5.4.3"
   },
-  "keywords": [
-    "gatsby"
-  ],
-  "license": "MIT",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "format": "prettier --write 'src/**/*.js'",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "diff": "prettier --config .prettierrc --list-different 'src/**/*.js'",
+    "format": "prettier --config .prettierrc --write 'src/**/*.js'",
+    "test": "eslint .",
+    "precommit": "lint-staged",
+    "prepush": "yarn test"
+  },
+  "lint-staged": {
+    "*.{js,jsx}": ["prettier --config .prettierrc --write", "git add"]
   },
   "devDependencies": {
+    "babel-eslint": "^8.2.6",
+    "eslint": "^5.3.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-babel": "^5.1.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-prettier": "^2.6.2",
+    "eslint-plugin-react": "^7.10.0",
+    "eslint-plugin-relay": "^0.0.26",
+    "husky": "^0.14.3",
+    "lint-staged": "^7.2.0",
     "prettier": "^1.11.1"
   }
 }
