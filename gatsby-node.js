@@ -3,13 +3,23 @@
  *
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
+// const webpack = require('webpack')
 
 // exports.modifyWebpackConfig = ({ config, stage }) => {
 //   if (stage === 'build-html') {
-//     config.loader('null', {
-//       test: /smoothscroll-polyfill|react-scroll-to-element/,
-//       loader: 'null-loader',
+//     config.loader("null", {
+//       test: /child-partners/,
+//       loader: "null-loader",
 //     });
+//     config.loader("null", {
+//       test: /react-owl-carousel/,
+//       loader: "null-loader",
+//     });
+
+//     config.plugins = [
+//       new webpack.IgnorePlugin(/child-partners/),
+//       new webpack.IgnorePlugin(/react-owl-carousel/),
+//     ]
 //   }
 // };
 

@@ -1,6 +1,6 @@
-import { env } from 'process'
+import { isProduction } from '../utils'
 
-const IS_PRODUCTION = env.NODE_ENV === 'production'
+const IS_PRODUCTION = isProduction()
 
 const makeProfile = ({ name, cover, options = {} }) => {
   return {

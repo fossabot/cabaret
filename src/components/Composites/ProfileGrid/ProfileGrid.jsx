@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import OwlCarousel from 'react-owl-carousel'
 
 import { Grid, Row, Col } from '../../Elements/Grid'
 import Slider from '../../Slider/Slider'

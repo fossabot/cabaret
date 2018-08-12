@@ -2,16 +2,12 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import Page from '../Elements/Page/Page'
-import { Grid, Row, Col } from '../Elements/Grid'
-import Profile from '../Elements/Profile/Profile'
-// import getProfileData from '../../utils/getProfileData';
 import { getProfiles, getVipOnly, getFeatured } from '../../constants/profiles'
 import BannerWithProfiles from '../Composites/BannerWithProfiles/BannerWithProfiles'
 import ProfileGrid from '../Composites/ProfileGrid/ProfileGrid'
 
 const EscortsPageContainer = ({ escorts }) => (
   <Page>
-    {console.log('escorts', escorts)}
     <BannerWithProfiles items={getFeatured()} />
     <ProfileGrid
       title={

@@ -1,6 +1,6 @@
-import { env } from 'process'
+import { isProduction } from '../utils'
 
-const devMode = env.NODE_ENV !== 'production'
+const IS_PRODUCTION = isProduction()
 
 const placeholder = 'http://placehold.it/362x536'
 
@@ -32,7 +32,7 @@ const getProfileName = () => {
 }
 
 const getProfileUrl = () => {
-  if (devMode) return placeholder
+  if (!IS_PRODUCTION) return placeholder
   const index = Math.floor(Math.random() * photos.length)
   return photos[index]
 }

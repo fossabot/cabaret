@@ -1,9 +1,7 @@
 import React, { Component } from 'react'
+import Slider from 'react-slick'
 import PropTypes from 'prop-types'
-import OwlCarousel from 'react-owl-carousel'
 
-import { Grid, Row, Col } from '../../Elements/Grid'
-import Slider from '../../Slider/Slider'
 import Profile from '../../Elements/Profile/Profile'
 
 import './BannerWithProfiles.scss'
@@ -15,42 +13,60 @@ export default class BannerWithProfiles extends Component {
     items: PropTypes.array.isRequired,
   }
 
-  renderSlider = () => {
-    const slides = this.renderSlides()
-
-    const responsive = {
-      0: {
-        items: 1,
-        dots: false,
+  getSettings = () => {
+    const responsive = [
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 5,
+          slidesToScroll: 5,
+        },
       },
-
-      576: {
-        items: 3,
+      {
+        breakpoint: 922,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 4,
+        },
       },
-
-      992: {
-        items: 5,
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+        },
       },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: false,
+          dots: true,
+        },
+      },
+    ]
+
+    return {
+      className: 'banner-profile',
+      infinite: true,
+      lazyLoad: true,
+      arrows: true,
+      dots: true,
+      slidesToShow: 5,
+      slidesToScroll: 5,
+      responsive,
     }
-
-    return <Slider loop nav lazyLoad slides={slides} responsive={responsive} />
   }
 
   renderSlides = () => {
     const { items } = this.props
     return items.map((item, index) => {
-      return (
-        <Col className={`col ${classPrefix}__item`} key={index}>
-          <Profile slider profile={item} />
-        </Col>
-      )
+      return <Profile slider profile={item} key={index} />
     })
   }
   render() {
-    return (
-      <Grid fluid className={classPrefix}>
-        <Row className={`${classPrefix}__carousel`}>{this.renderSlider()}</Row>
-      </Grid>
-    )
+    const settings = this.getSettings()
+    return <Slider {...settings}>{this.renderSlides()}</Slider>
   }
 }
