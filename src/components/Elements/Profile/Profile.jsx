@@ -8,7 +8,7 @@ import './Profile.scss'
 const Profile = ({ profile, slider = false }) => (
   <div className={`profile ${slider ? 'with-zoom' : null}`}>
     <figure className="profile__poster" title={profile.name}>
-      <a href={`acompanhante/${profile.url}`} className="profile__link">
+      <a href={profile.url} className="profile__link">
         {profile.hasVideo &&
           !slider && <Icon name="youtube-play" className="profile__video" title="Possui video" />}
         <div className="profile__image">
@@ -17,7 +17,7 @@ const Profile = ({ profile, slider = false }) => (
       </a>
       <figcaption className="profile__poster-caption" title={profile.name}>
         <h3 className="profile__name">
-          <a href={`acompanhante/${profile.url}`}>{profile.name}</a>
+          <a href={profile.url}>{profile.name}</a>
         </h3>
         <span className="profile__phone">{profile.phone}</span>
         {profile.hasWhatsapp && (

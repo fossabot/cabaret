@@ -1,11 +1,15 @@
 import React from 'react'
-import { Grid, Row, Col } from '../../Elements/Grid'
-// import Scroll from 'react-scroll-to-element'
 
+if (typeof window !== 'undefined') {
+  require('smooth-scroll')('a[href*="#"]')
+}
+
+import { Grid, Row, Col } from '../../Elements/Grid'
+import Link from '../../Elements/Link/Link'
 import Countdown from '../../Countdown'
 import downArrow from '../../../../static/svgs/arrow.svg'
 
-const BannerSection = ({datetime}) => (
+const BannerSection = ({ datetime }) => (
   <section className="landing__banner-section p-0">
     <Grid>
       <Row className="justify-content-center">
@@ -20,11 +24,9 @@ const BannerSection = ({datetime}) => (
           <Countdown datetime={datetime} />
         </Col>
         <Col md={6} className="align-self-end text-center">
-          {/*<Scroll type="class" element="landing__about-section">*/}
-            <button className="btn">
-              <img src={downArrow} />
-            </button>
-          {/*</Scroll>*/}
+          <Link to={'#about'}>
+            <img src={downArrow} />
+          </Link>
         </Col>
       </Row>
     </Grid>

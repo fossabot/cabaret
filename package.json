@@ -32,6 +32,7 @@
     "react-slick": "^0.23.1",
     "react-text-mask": "^5.4.3",
     "slick-carousel": "^1.8.1",
+    "smooth-scroll": "^14.2.1",
     "yarn": "^1.9.4"
   },
   "scripts": {

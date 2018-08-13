@@ -10,7 +10,7 @@ const makeProfile = ({ name, cover, options = {} }) => {
     hasVideo: options.hasVideo || false,
     hasWhatsapp: options.hasWhatsapp || false,
     phone: options.phone || '(00) 12345-6789',
-    url: 'sofia-orlovisky',
+    url: '/acompanhante/sofia-orlovisky',
   }
 }
 
