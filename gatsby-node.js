@@ -3,36 +3,60 @@
  *
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
-// const webpack = require('webpack')
 
-// exports.modifyWebpackConfig = ({ config, stage }) => {
-//   if (stage === 'build-html') {
-//     config.loader("null", {
-//       test: /child-partners/,
-//       loader: "null-loader",
-//     });
-//     config.loader("null", {
-//       test: /react-owl-carousel/,
-//       loader: "null-loader",
-//     });
+/* eslint-disable */
+const path = require('path')
+const { createFilePath } = require('gatsby-source-filesystem')
 
-//     config.plugins = [
-//       new webpack.IgnorePlugin(/child-partners/),
-//       new webpack.IgnorePlugin(/react-owl-carousel/),
-//     ]
-//   }
-// };
+const resolveEscortUrl = (slug) => `/acompanhante${slug}`
 
-// You can delete this file if you're not using it
-// exports.modifyBabelrc = ({ babelrc }) => ({
-//   ...babelrc,
-//   plugins: babelrc.plugins.concat([
-//     'transform-decorators-legacy',
-//     'transform-class-properties',
-//     'transform-react-display-name',
-//     ['extensible-destructuring', {
-//       'mode': 'optout',
-//       'impl': 'safe'
-//     }]
-//   ]),
-// })
+exports.onCreateNode = ({ node, getNode, boundActionCreators }) => {
+  const { createNodeField } = boundActionCreators
+  if (node.internal.type === 'MarkdownRemark') {
+    const slug = createFilePath({ node, getNode, basePath: 'pages' })
+    createNodeField({
+      node,
+      name: 'slug',
+      value: slug,
+    })
+
+    createNodeField({
+      node,
+      name: 'url',
+      value: resolveEscortUrl(slug),
+    })
+  }
+}
+
+const slugQuery = `
+{
+  allMarkdownRemark {
+    edges {
+      node {
+        fields {
+          slug
+        }
+      }
+    }
+  }
+}`
+
+exports.createPages = ({ graphql, boundActionCreators }) => {
+  const { createPage } = boundActionCreators
+  return new Promise((resolve) => {
+    graphql(slugQuery).then((result) => {
+      result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+        const { slug } = node.fields
+        createPage({
+          path: resolveEscortUrl(slug),
+          component: path.resolve('./src/templates/profile.jsx'),
+          context: {
+            // Data passed to context is available in page queries as GraphQL variables.
+            slug,
+          },
+        })
+      })
+      resolve()
+    })
+  })
+}

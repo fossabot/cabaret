@@ -21,6 +21,7 @@ export default class GalleryImages extends Component {
     <Masonry className="row thumbnails">
       {images.map((img, currentImageIndex) => {
         const colSize = images.length % 4 === 0 || images.length > 6 ? 6 : 12
+        // const colSize = 6;
         return (
           <div className={`col-lg-${colSize} col-sm-6`} key={currentImageIndex}>
             <a

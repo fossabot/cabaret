@@ -3,11 +3,12 @@ name: Sofia Orlovisky
 subtitle: Ruiva
 phone: (00) 12345-6789
 image: http://www.rstopmodels.com/media/catalog/product/cache/8/thumbnail/0f396e8a55728e79b48334e699243c07/s/o/sofia_08.jpg
-cover: http://www.rstopmodels.com/media/catalog/product/cache/8/thumbnail/0f396e8a55728e79b48334e699243c07/s/o/sofia_03.jpg
+cover: http://www.private55.com/content/foto/acompanhantes/acompanhantes-porto-alegre-sofia-orlovisky-1216-11-1521208857.jpg
 video: false
 whatsapp: true
 vip: true
 new: true
+views: 1582
 checked: true
 social:
   twitter: false
@@ -35,8 +36,8 @@ profile:
   waist: 62
   hips: 98
   feet: 34
-  eyes: "verdes"
-  hair: "ruivo"
+  eyes: Mel
+  hair: Ruivo
 services:
   kiss: true
   blowjob: true
@@ -54,13 +55,14 @@ payment:
   money: true
   credit: true
 gallery:
-  - http://www.rstopmodels.com/media/catalog/product/cache/8/thumbnail/0f396e8a55728e79b48334e699243c07/s/o/sofia_03.jpg
-  - http://www.rstopmodels.com/media/catalog/product/cache/8/thumbnail/0f396e8a55728e79b48334e699243c07/s/o/sofia_08.jpg
-  - http://www.rstopmodels.com/media/catalog/product/cache/8/thumbnail/0f396e8a55728e79b48334e699243c07/s/o/sofia_05.jpg
-  - http://www.rstopmodels.com/media/catalog/product/cache/8/thumbnail/0f396e8a55728e79b48334e699243c07/s/o/sofia_04.jpg
-  - http://www.rstopmodels.com/media/catalog/product/cache/8/thumbnail/0f396e8a55728e79b48334e699243c07/s/o/sofia_06.jpg
   - http://www.rstopmodels.com/media/catalog/product/cache/8/thumbnail/0f396e8a55728e79b48334e699243c07/s/o/sofia_01.jpg
+  - http://www.rstopmodels.com/media/catalog/product/cache/8/thumbnail/0f396e8a55728e79b48334e699243c07/s/o/sofia_02.jpg
+  - http://www.rstopmodels.com/media/catalog/product/cache/8/thumbnail/0f396e8a55728e79b48334e699243c07/s/o/sofia_03.jpg
+  - http://www.rstopmodels.com/media/catalog/product/cache/8/thumbnail/0f396e8a55728e79b48334e699243c07/s/o/sofia_04.jpg
+  - http://www.rstopmodels.com/media/catalog/product/cache/8/thumbnail/0f396e8a55728e79b48334e699243c07/s/o/sofia_05.jpg
+  - http://www.rstopmodels.com/media/catalog/product/cache/8/thumbnail/0f396e8a55728e79b48334e699243c07/s/o/sofia_06.jpg
   - http://www.rstopmodels.com/media/catalog/product/cache/8/thumbnail/0f396e8a55728e79b48334e699243c07/s/o/sofia_07.jpg
+  - http://www.rstopmodels.com/media/catalog/product/cache/8/thumbnail/0f396e8a55728e79b48334e699243c07/s/o/sofia_08.jpg
   - http://www.rstopmodels.com/media/catalog/product/cache/8/thumbnail/0f396e8a55728e79b48334e699243c07/s/o/sofia_09.jpg
 ---
 

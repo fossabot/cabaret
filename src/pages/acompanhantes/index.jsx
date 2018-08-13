@@ -1,13 +1,54 @@
 import React from 'react'
 
-import EscortsPageContainer from '../../components/Containers/EscortsPageContainer';
+import EscortsPageContainer from '../../components/Containers/EscortsPageContainer'
 
-// Mock data
-import getProfileData from '../../utils/getProfileData';
-const escorts = getProfileData();
+const MapData = (data) => {
+  const {
+    allMarkdownRemark: { edges },
+  } = data
+  return edges.map((nodes) => {
+    console.log(nodes)
+    const {
+      node: {
+        frontmatter,
+        fields: { url },
+      },
+    } = nodes
+    return {
+      ...frontmatter,
+      hasWhatsapp: frontmatter.whatsapp,
+      hasVideo: frontmatter.video,
+      cover: frontmatter.image,
+      url,
+    }
+  })
+}
 
-const Acompanhantes = () => (
-  <EscortsPageContainer escorts={escorts} />
-);
+const Acompanhantes = ({ data }) => <EscortsPageContainer escorts={MapData(data)} />
 
-export default Acompanhantes;
+export default Acompanhantes
+
+export const query = graphql`
+  query AllProfiles {
+    allMarkdownRemark {
+      edges {
+        node {
+          fields {
+            url
+          }
+          frontmatter {
+            name
+            phone
+            image
+            cover
+            video
+            whatsapp
+            vip
+            new
+            checked
+          }
+        }
+      }
+    }
+  }
+`

@@ -5,9 +5,11 @@ import Page from '../Elements/Page/Page'
 import { getProfiles, getVipOnly, getFeatured } from '../../constants/profiles'
 import BannerWithProfiles from '../Composites/BannerWithProfiles/BannerWithProfiles'
 import ProfileGrid from '../Composites/ProfileGrid/ProfileGrid'
+import TitleAndMetaTags from '../TitleAndMetaTags'
 
 const EscortsPageContainer = ({ escorts }) => (
   <Page>
+    <TitleAndMetaTags />
     <BannerWithProfiles items={getFeatured()} />
     <ProfileGrid
       title={
@@ -24,6 +26,15 @@ const EscortsPageContainer = ({ escorts }) => (
         </h2>
       }
       items={getProfiles()}
+    />
+
+    <ProfileGrid
+      title={
+        <h2 className="page__subtitle">
+          <strong>Gatas Cabaret</strong> (from data)
+        </h2>
+      }
+      items={escorts}
     />
   </Page>
 )

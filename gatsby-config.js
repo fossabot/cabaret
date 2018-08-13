@@ -9,10 +9,42 @@ module.exports = {
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sass',
     // 'gatsby-plugin-purify-css',
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp',
     'gatsby-plugin-react-next',
     'gatsby-plugin-lodash',
     'gatsby-plugin-catch-links',
     'gatsby-plugin-sitemap',
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: 'profiles',
+        path: `${__dirname}/profiles/`,
+      },
+    },
+    'gatsby-transformer-remark',
+    // {
+    //   resolve: 'gatsby-transformer-remark',
+    //   options: {
+    //     plugins: [
+    //       {
+    //         resolve: 'gatsby-remark-images',
+    //         options: {
+    //           maxWidth: 960,
+    //           linkImagesToOriginal: false,
+    //         },
+    //       },
+    //       {
+    //         resolve: 'gatsby-remark-responsive-iframe',
+    //         options: {
+    //           wrapperStyle: 'margin-bottom: 2rem',
+    //         },
+    //       },
+    //       'gatsby-remark-copy-linked-files',
+    //       'gatsby-remark-smartypants',
+    //     ],
+    //   },
+    // },
     {
       resolve: 'gatsby-plugin-google-fonts',
       options: {
@@ -38,8 +70,6 @@ module.exports = {
         siteUrl: `https://www.example.com`,
       },
     },
-    'gatsby-transformer-sharp',
-    'gatsby-plugin-sharp',
     // {
     //   resolve: 'gatsby-plugin-favicon',
     //   options: {
