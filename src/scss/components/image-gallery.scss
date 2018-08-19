@@ -1,0 +1,47 @@
+.image-gallery {
+  margin: 2rem 0;
+
+  a {
+    padding: 10px !important;
+    display: block;
+    overflow: hidden;
+    position: relative;
+    transition: all .3s ease;
+
+    &:hover {
+      padding: 5px auto !important;
+
+      .image-gallery__image {
+        transform: scale(1.05);
+        backface-visibility: hidden;
+        opacity: 0.6;
+      }
+
+      .icon {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__image {
+    position: relative;
+    max-width: 100%;
+    width: 415px;
+    height: 250px;
+    background-color: $black;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: all .15s ease;
+  }
+
+  .icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    color: $white;
+    transition: all .3s ease;
+    opacity: 0;
+  }
+}

@@ -1,0 +1,44 @@
+.profile-card {
+  margin: 2rem 0;
+
+  &__image {
+    margin: -80px auto 0;
+
+    img {
+      margin: 10px;
+      width: 90%;
+      border: 10px solid $white;
+    }
+  }
+
+  &__phone {
+    font-size: $font-size-lg;
+    padding: 1rem 0;
+    margin-bottom: 1rem;
+  }
+
+  &__table {
+    label {
+      font-size: 12px;
+    }
+
+    .tag {
+      padding: 8px;
+      background-color: $black2;
+    }
+  }
+
+  h2, h3 {
+    font-family: $font-family !important;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .icon {
+    color: $white !important;
+  }
+}

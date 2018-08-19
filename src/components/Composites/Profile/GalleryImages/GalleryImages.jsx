@@ -1,13 +1,17 @@
 import React, { Component, Fragment } from 'react'
-import Masonry from 'react-masonry-component'
 import Lightbox from 'react-images'
+
+import { Row, Col } from '../../../Elements/Grid'
+import Icon from '../../../Elements/Icon/Icon'
+
+// TODO: Refactor with Translate and profile name
 
 export default class GalleryImages extends Component {
   constructor(props) {
     super(props)
 
     const images = this.props.images.map((img) => {
-      return { src: img }
+      return { src: img, caption: 'Profile name', alt: 'Profile name' }
     })
 
     this.state = {
@@ -18,24 +22,26 @@ export default class GalleryImages extends Component {
   }
 
   renderImageThumbnails = (images) => (
-    <Masonry className="row thumbnails">
+    <Row noGutters className="image-gallery">
       {images.map((img, currentImageIndex) => {
-        const colSize = images.length % 4 === 0 || images.length > 6 ? 6 : 12
-        // const colSize = 6;
         return (
-          <div className={`col-lg-${colSize} col-sm-6`} key={currentImageIndex}>
+          <Col xs={6} md={4} key={currentImageIndex}>
             <a
+              className="image-gallery__cover"
               href={img.src}
+              title="name"
               onClick={(event) => {
                 event.preventDefault()
                 this.setState({ currentImageIndex, isLightboxOpen: true })
               }}>
-              <img src={img.src} />
+              <div className="image-gallery__image" style={{ backgroundImage: `url(${img.src})` }}>
+                <Icon name="search" />
+              </div>
             </a>
-          </div>
+          </Col>
         )
       })}
-    </Masonry>
+    </Row>
   )
 
   renderLightBox = (images) => (

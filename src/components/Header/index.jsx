@@ -9,7 +9,7 @@ class Header extends Component {
     return (
       <header className="header navbar navbar-expand-md navbar-dark">
         <div className="container">
-          <Link to="/">
+          <Link to="/acompanhantes">
             <h1 className="navbar-brand mb-0 text-hide">
               <span>Cabaret Acompanhantes de Luxo</span>
               <img src="/img/logo.png" width="120" alt="Cabaret Acompanhantes de Luxo." />

@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "author": "Rafaell Lycan <sonny.webdsg@gmail.com>",
   "dependencies": {
+    "@material-ui/core": "^1.5.0",
     "add": "^2.0.6",
     "bootstrap": "^4.1.0",
     "bootstrap-material-design": "^4.1.1",
@@ -41,6 +42,7 @@
     "react-slick": "^0.23.1",
     "react-text-mask": "^5.4.3",
     "react-visibility-sensor": "^3.11.1",
+    "reactstrap": "^6.4.0",
     "sanitize-html": "^1.18.4",
     "slick-carousel": "^1.8.1",
     "smooth-scroll": "^14.2.1",

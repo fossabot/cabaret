@@ -1,5 +1,10 @@
 export default {
+  'alt.name': '{{name}} - Cabare Club Acompanhantes',
   // Page:: Profile
+  'profile.greetings': 'Olá, sou a {{name}}',
+  'profile.age': 'Tenho {{age}} aninhos',
+
+  // Page:: Profile -> Attributes
   age: 'Idade',
   height: 'Altura',
   weight: 'Peso',
@@ -10,6 +15,7 @@ export default {
   eyes: 'Olhos',
   hair: 'Cabelo',
 
+  // Page:: Profile -> Services
   kiss: 'Beijo',
   blowjob: 'Oral',
   anal: 'Anal',

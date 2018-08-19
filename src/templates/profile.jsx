@@ -5,10 +5,12 @@ import { Grid, Row, Col } from '../components/Elements/Grid'
 import TitleAndMetaTags from '../components/TitleAndMetaTags'
 import Page from '../components/Elements/Page/Page'
 import Icon from '../components/Elements/Icon/Icon'
-import GalleryImages from '../components/Composites/GalleryImages/GalleryImages'
+import GalleryImages from '../components/Composites/Profile/GalleryImages/GalleryImages'
+import InformationCard from '../components/Composites/Profile/InformationCard/InformationCard'
 
 import { multipleValuesBool } from '../utils'
 import { translate as t } from '../services/TransateService'
+import FeaturedBanner from '../components/Composites/Profile/FeaturedBanner/FeaturedBanner'
 
 class ProfilePage extends Component {
   constructor(props) {
@@ -30,7 +32,7 @@ class ProfilePage extends Component {
 
   renderSocialNetwork = (data) => {
     const { social } = data
-    // console.log('renderSocialNetwork', social);
+    console.log('renderSocialNetwork', social)
     return null
   }
 
@@ -142,7 +144,7 @@ class ProfilePage extends Component {
           cover={profile.cover}
         />
         {this.state.inView && (
-          <div className="profile-page__floating">
+          <div className="profile-page__floating hidden-sm-down">
             <Icon name="whatsapp" className="profile-page__floating-icon" />
             <div className="profile-page__floating-info">
               <span>{profile.name}</span>
@@ -150,53 +152,106 @@ class ProfilePage extends Component {
             </div>
           </div>
         )}
-        <Grid fluid componentClass="section">
-          <Row
-            style={{ backgroundImage: `url("${profile.cover}")` }}
-            className="profile-page__cover justify-content-md-center align-items-center">
-            <Col sm={6}>
-              <VisibilitySensor onChange={this.handleChange} partialVisibility scrollThrottle={0}>
-                <div className="profile-page__title">
-                  <h1>{profile.name}</h1>
-                  <h3>{profile.phone}</h3>
-                  <p>Ao ligar para ela, diga que viu o anúncio no Cabare Club.</p>
-                </div>
-              </VisibilitySensor>
-            </Col>
-          </Row>
-        </Grid>
-        <Grid className="profile-page__content">
-          <Row>
-            <Col sm={6}>
-              <GalleryImages images={profile.gallery} />
-            </Col>
-            <Col sm={6}>
-              <h1 className="page__subtitle">{profile.name}</h1>
+        {/* Acompanhante / Destaque */}
+        <VisibilitySensor onChange={this.handleChange} partialVisibility scrollThrottle={0}>
+          <FeaturedBanner data={profile} />
+        </VisibilitySensor>
 
-              <div dangerouslySetInnerHTML={{ __html: description }} />
+        {/* Ensaio */}
 
-              {this.renderProfile(profile)}
+        {/* Interation bar */}
+        <section className="profile-page__interation-bar" id="profile-interaction">
+          <Grid>
+            <Row>
+              <Col md={{ size: 3, offset: 3 }} className="tag">
+                <span>
+                  <Icon name="eye" />
+                  <span>{profile.views}</span>
+                </span>
+                <p>visualizações</p>
+              </Col>
+              <Col md={{ size: 3 }} className="tag">
+                <a href="#">
+                  <Icon name="share-alt" />
+                  <span>compartilhe</span>
+                </a>
+                <p>envie para um amigo</p>
+              </Col>
+            </Row>
+          </Grid>
+        </section>
 
-              <h3 className="page__subtitle">O que Faço?</h3>
-              {this.renderServices(profile)}
+        {/* Content */}
+        <section className="profile-page__content">
+          <Grid>
+            <InformationCard data={profile} description={description} />
+          </Grid>
+        </section>
 
-              <h3 className="page__subtitle">Como atendo</h3>
-              {this.renderAditionalServices(profile)}
+        {/* Pricing */}
+        <section className="profile-page__pricing">
+          <Grid>
+            <Row>
+              <Col xs={12}>
+                <header>
+                  <h2>Vamos marcar?</h2>
+                </header>
+              </Col>
+              <Col className="text-center" md={3}>
+                <Icon name="clock-o" />
+                <p>1 HORA</p>
+                <hr />
+                <span className="h4">A Combinar</span>
+              </Col>
+              <Col className="text-center" md={3}>
+                <Icon name="clock-o" />
+                <p>2 HORAS</p>
+                <hr />
+                <span className="h4">A Combinar</span>
+              </Col>
+              <Col className="text-center" md={3}>
+                <Icon name="moon-o" />
+                <p>PERNOITE</p>
+                <hr />
+                <span className="h4">A Combinar</span>
+              </Col>
+              <Col className="text-center" md={3}>
+                <Icon name="usd" />
+                <p>PAGAMENTO</p>
+                <hr />
+                <span className="h6">Dinheiro</span> <hr />
+                <span className="h6">Cartão (Débito)</span>
+              </Col>
+            </Row>
+          </Grid>
+        </section>
 
-              <h3 className="page__subtitle">Quanto</h3>
-              {this.renderPricesAndPayments(profile)}
-            </Col>
-          </Row>
-          <Row>
-            <Col sm={12} className="text-center">
-              <p>Possuo um total de</p>
-              <div className="profile-page__counter">
-                <h3>{profile.views}</h3>
-                <h6>visitas</h6>
-              </div>
-            </Col>
-          </Row>
-        </Grid>
+        {/* Gallery */}
+        <section className="profile-page__gallery">
+          <Grid>
+            <GalleryImages images={profile.gallery} />
+          </Grid>
+        </section>
+
+        {/* Services */}
+        <section className="profile-page__services">
+          <Grid>
+            <Row>
+              <Col sm={4}>
+                <h3 className="page__subtitle">O que Faço?</h3>
+                {this.renderServices(profile)}
+              </Col>
+              <Col sm={4}>
+                <h3 className="page__subtitle">Como atendo</h3>
+                {this.renderAditionalServices(profile)}
+              </Col>
+              <Col sm={4}>
+                <h3 className="page__subtitle">Quanto</h3>
+                {this.renderPricesAndPayments(profile)}
+              </Col>
+            </Row>
+          </Grid>
+        </section>
       </Page>
     )
   }

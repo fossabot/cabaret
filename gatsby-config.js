@@ -4,7 +4,7 @@ module.exports = {
     siteUrl: 'https://cabareclub.com.br',
     launchDate: process.env.APP_LAUNCH_DATE || '2018-10-1',
   },
-  pathPrefix: '/',
+  // pathPrefix: '/',
   plugins: [
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sass',

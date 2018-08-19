@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import cx from 'classnames'
+// import cx from 'classnames'
 
 export default class Title extends Component {
   static propTypes = {
@@ -11,16 +11,16 @@ export default class Title extends Component {
   static defaultProps = {
     className: 'rv-title',
     type: 'h1',
-    children: null
+    children: null,
   }
 
   getDashLine() {
-    return (<span className="rv-title__dash-line" key={`dash-${Date.now()}`} />);
+    return <span className="rv-title__dash-line" key={`dash-${Date.now()}`} />
   }
 
   getTitle() {
-    const { type, children, className } = this.props;
-    return React.createElement(type, { className }, [...children]);
+    const { type, children, className } = this.props
+    return React.createElement(type, { className }, [...children])
   }
 
   render() {
@@ -29,6 +29,6 @@ export default class Title extends Component {
         {this.getTitle()}
         {this.getDashLine()}
       </div>
-    );
+    )
   }
 }

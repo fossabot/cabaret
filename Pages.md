@@ -1,5 +1,46 @@
 # El Cabare Club
 
+Resource:
+- https://web.archive.org/web/20170728035718/http://bhmodels.com.br:80/acompanhantes
+- https://web.archive.org/web/20170910073710/http://bhmodels.com.br:80/home
+- https://bhmodels.com.br/
+- https://confrariars.com.br/acompanhante/isis-village-porto-alegre/
+
+# Photos Specs:
+
+- 697x1045
+- 798x1200
+- 800x1200
+- 375x560
+- 170x254
+- 140x209
+
+# Warning page:
+
+- Logo
+- Text
+  - Acompanhantes Cabare Club é um site de garotas de SP, Escorts, Classificados Eróticos. Contém material orientado para adultos, destinado a maiores de 18 anos.
+  - Se você considera esse tipo de material ofensivo, por favor NÃO PROSSIGA. O Cabare Club Acompanhantes não se responsabiliza pelas consequências da sua decisão a partir deste ponto. [Sobre este site](#popup).
+  - Entrar (Home/Acompanhantes)
+  - ou Sair (Google.com.br)
+- Popup (About us)
+  - O Cabare Club é um portal de acompanhantes SP, garotas de programa, classificados eróticos, escorts, boates, night clubs e sex shops de São Paulo - SP. Acompanhantes Cabare Club é única e exclusivamente um veículo de comunicação entre pessoas. O site Cabare Club Acompanhantes não tem nenhum vínculo com seus anunciantes e/ou garotas, que são os únicos responsáveis pelas informações contidas em seus respectivos anúncios, bem como pela garantia de que são maiores de idade. O Cabare Club NÃO É AGÊNCIA de acompanhantes / modelos e não assume nenhuma responsabilidade pelo conteúdo dos anúncios ou pela resposta a qualquer um deles.
+  - Alerta contra fraudes e cópias não autorizadas
+  - O Acompanhantes Cabare Club alerta público e anunciantes sobre falsos sites e pessoas que estão utilizando seu nome para oferecer serviços similares na internet.
+  - O Acompanhantes Cabare Club esclarece que não posssui sociedade com outras pessoas ou sites do ramo e que está tomando todas as providências legais cabíveis.
+  - Sobre Cópias não autorizadas:
+  - Cabare Club é marca registrada no INPI(Instituto Nacional da Propriedade Industrial). O nome Cabare Club ou seu logotipo não podem ser usados de maneira alguma, incluindo anúncios ou publicidade relacionados a este site, sem premissão prévia e por escrito.
+  - O conteúdo genérico deste website, incluindo, nomeadamente, textos, gráficos, imagens e quaisquer outras informações, é propriedade do Cabare Club, que detém os direitos de autor sobre o mesmo, com exceção dos conteúdos fornecidos por colaboradores, parceiros ou anunciantes que se encontrem indentificados como tal. A proteção dos direitos de autor dos conteúdos do Acompanhantes Cabare Club entende-se a todas as reproduções ou cópias, obtidas a partir do conteúdo deste website.
+  - Endereço único e oficial de acesso: [www.cabareclub.com.br](#)
+
+# 404
+- Logo
+- Text <col 4>
+  - oops!<h1> <header>
+  - Pagina não encontrada <h2> <header>
+  - O anúncio ou página que você procura não está mais no ar ou mudou de endereço. <p> <div>
+  - CONHEÇA AS ACOMPANHANTES MAIS LINDAS DE SP <btn><footer>
+
 ## Top Menu
 - Home
 - Modelos
