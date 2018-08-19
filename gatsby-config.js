@@ -48,7 +48,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-google-fonts',
       options: {
-        fonts: ['Roboto', 'Lato', 'Oswald'],
+        fonts: ['Montserrat', 'Playfair Display', 'Oswald'],
       },
     },
     {

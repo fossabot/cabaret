@@ -23,6 +23,8 @@ const TitleAndMetaTags = ({
       {title} | {siteName} {location}
     </title>
 
+    <link rel="icon" type="image/png" href="/img/favicon.jpg" />
+
     <meta property="description" content={sanitize(description)} />
     <meta property="keywords" content={keywords} />
 

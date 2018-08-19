@@ -20,7 +20,12 @@ export default class FeaturedBanner extends PureComponent {
 
   render() {
     const {
-      data: { cover, name, phone },
+      data: {
+        cover,
+        name,
+        phone,
+        profile: { age, feet, height, weight },
+      },
     } = this.props
 
     return (
@@ -32,6 +37,9 @@ export default class FeaturedBanner extends PureComponent {
             <div className="featured-banner__title">
               <h1>{name}</h1>
               <h3>{phone}</h3>
+              <p className="h6">
+                {age} anos | {height} m | {weight} kg | Pés {feet}
+              </p>
               <p>Ao ligar para ela, diga que viu o anúncio no Cabare Club.</p>
             </div>
           </Col>

@@ -81,5 +81,31 @@
     .icon {
       font-size: 64px;
     }
+
+    .service-col {
+      padding: 0 30px;
+      border-left: 1px solid $pink;
+
+      &:first-child {
+        border: none;
+      }
+    }
+
+    h3 {
+      text-transform: uppercase;
+    }
+
+    ul {
+      padding: 0;
+      list-style: none;
+    }
+
+    li {
+      padding: 5px 0;
+
+      strong {
+        color: $pink;
+      }
+    }
   }
 }

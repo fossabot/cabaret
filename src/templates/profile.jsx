@@ -237,16 +237,20 @@ class ProfilePage extends Component {
         <section className="profile-page__services">
           <Grid>
             <Row>
-              <Col sm={4}>
-                <h3 className="page__subtitle">O que Faço?</h3>
+              <Col sm={4} className="service-col">
+                <h3 className="page__subtitle">
+                  <strong>O que</strong> faço:
+                </h3>
                 {this.renderServices(profile)}
               </Col>
-              <Col sm={4}>
-                <h3 className="page__subtitle">Como atendo</h3>
+              <Col sm={4} className="service-col">
+                <h3 className="page__subtitle">
+                  <strong>Como</strong> Atendo:
+                </h3>
                 {this.renderAditionalServices(profile)}
               </Col>
-              <Col sm={4}>
-                <h3 className="page__subtitle">Quanto</h3>
+              <Col sm={4} className="service-col">
+                <h3 className="page__subtitle">Quanto:</h3>
                 {this.renderPricesAndPayments(profile)}
               </Col>
             </Row>

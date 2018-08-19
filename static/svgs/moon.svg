@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
+                                        <defs>
+                                            <style>
+                                                .cls-1 {
+                                                    fill: #d3d3d3;
+                                                }
+                                            </style>
+                                        </defs>
+                                        <path id="icon_pernoite" class="cls-1" d="M45.059,34.867A50.065,50.065,0,0,1,46.244,24.2,41.906,41.906,0,1,0,101.8,79.756a50.065,50.065,0,0,1-10.667,1.185A46.029,46.029,0,0,1,45.059,34.867Z" transform="translate(-21.8 -24.2)"></path>
+                                    </svg>
