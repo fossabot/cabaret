@@ -1,14 +1,14 @@
 /**
  * TODO:
- * 1. Change the folder to styles
- * 2. Cgabge index.scss to styles.scss
- * 3. Create a _config.scss to reset: body, headings, p
- * 4. require (base/index, components/index, layouts/index, pages/index, templates/index, config)
- * 5. Add also add new media queries if needed
- * 6. Base have: variables.scss, reset.scss and bootstrap.scss and font.scss (@font-face)
- * 7. Layouts has everything generic
- * 8. Each page have their own styles
- * 9. Templates: self explanatory
+ * 1. [] Change the folder to styles
+ * 2. [] Cgabge index.scss to styles.scss
+ * 3. [] Create a _config.scss to reset: body, headings, p
+ * 4. [] require (base/index, components/index, layouts/index, pages/index, templates/index, config)
+ * 5. [] Add also add new media queries if needed
+ * 6. [] Base have: variables.scss, reset.scss and bootstrap.scss and font.scss (@font-face)
+ * 7. [] Layouts has everything generic
+ * 8. [] Each page have their own styles
+ * 9. [] Templates: self explanatory
  */
 
  /* --- base --- */
@@ -20,5 +20,5 @@
  @import 'pages/index';
  /* --- templates --- */
 
-@import 'default';
+@import 'config';
 @import 'theme';

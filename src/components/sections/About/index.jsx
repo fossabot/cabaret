@@ -7,16 +7,9 @@ const AboutSection = () => (
     <Grid>
       <Row>
         <Col md={6}>
-          <div className="d-none d-md-block">
-            <Title type="h2">
-              Nosso Show: <br /> O Melhor Entretenimento Adulto
-            </Title>
-          </div>
-          <div className="d-block d-md-none text-center">
-            <Title type="h2">
-              Nosso Show: <br /> O Melhor Entretenimento Adulto
-            </Title>
-          </div>
+          <Title type="h2">
+            Nosso Show: <br /> O Melhor Entretenimento Adulto
+          </Title>
           <p>O que o Cabaré e São Paulo, têm a ver?</p>
           <p>
             Tudo! São Paulo é a cidade mais atraente e sedutora do Brasil, que nos proporciona um

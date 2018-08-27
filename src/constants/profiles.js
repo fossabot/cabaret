@@ -5,7 +5,7 @@ const IS_PRODUCTION = isProduction()
 const makeProfile = ({ name, cover, options = {} }) => {
   return {
     name,
-    cover: !IS_PRODUCTION ? cover : 'http://placehold.it/362x536',
+    cover: IS_PRODUCTION ? cover : 'http://placehold.it/362x536',
     isVip: options.isVip || false,
     hasVideo: options.hasVideo || false,
     hasWhatsapp: options.hasWhatsapp || false,

@@ -62,7 +62,7 @@ export default class ProfileInformationCard extends PureComponent {
     const { description } = this.props
     return (
       <Row className="profile-card">
-        <Col xs={0} sm={3} className="hidden-xs">
+        <Col xs={0} sm={3} className="d-none d-md-block">
           {this.renderPhoto()}
         </Col>
         <Col md={9} className="profile-card__information">

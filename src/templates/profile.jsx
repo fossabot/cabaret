@@ -143,6 +143,8 @@ class ProfilePage extends Component {
           location={profile.city}
           cover={profile.cover}
         />
+
+        {/* Floating number */}
         {this.state.inView && (
           <div className="profile-page__floating hidden-sm-down">
             <Icon name="whatsapp" className="profile-page__floating-icon" />
@@ -152,6 +154,7 @@ class ProfilePage extends Component {
             </div>
           </div>
         )}
+
         {/* Acompanhante / Destaque */}
         <VisibilitySensor onChange={this.handleChange} partialVisibility scrollThrottle={0}>
           <FeaturedBanner data={profile} />

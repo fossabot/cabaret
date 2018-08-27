@@ -1,0 +1,67 @@
+.collapse-wrap {
+  padding-bottom: 10px;
+
+  @include respond-above(sm) {
+    padding-bottom: 20px;
+  }
+}
+.collapse-item {
+  border-bottom: 2px solid #2E2D34;
+  width: 100%;
+
+  &__button {
+    display: block;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    font-weight: 400;
+    line-height: 24px;
+    outline: none;
+    text-align: left;
+    color: #666470;
+    font-size: 1rem;
+    margin: 0;
+    padding: 18px 60px 18px 14px;
+    white-space: pre-wrap;
+
+    &:after, &:before {
+      content: "";
+      position: absolute;
+      right: 15px;
+      width: 15px;
+      height: 1px;
+      background: #E82D42;
+      top: 50%;
+      transition: transform .2s ease;
+    }
+
+    &:after {
+      transform: rotate(90deg);
+    }
+  }
+
+  &--opened &__button {
+    &:before {
+      transform: rotate(45deg);
+    }
+
+    &:after {
+      transform: rotate(135deg);
+    }
+  }
+
+  &__content {
+    color: #666470;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 24px;
+    white-space: pre-wrap;
+    padding: 0 30px 10px 14px;
+    margin: 1em 0;
+
+    @include respond-above(sm) {
+      padding-bottom: 15px;
+    }
+  }
+}

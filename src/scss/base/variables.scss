@@ -31,8 +31,8 @@ $border-color-input: rgba(255, 255, 255, 0.1);
 /**
  * Typography
  */
-$heading-family: 'Oswald', sans-serif;
 $decorative-family: 'Playfair Display', serif;
+$heading-family: 'Oswald', sans-serif;
 $font-family: 'Montserrat', sans-serif;
 
 $font-size-h1: 2.25rem; // 36px
@@ -57,3 +57,13 @@ $spacing-xs: 0.5rem; // 8px
 $spacing-sm: 1rem; // 16px
 $spacing-md: 2rem; // 32px
 $spacing-lg: 3rem; // 48px
+
+/**
+ * Media
+ */
+$breakpoints: (
+  xs: 576px,
+  sm: 768px,
+  md: 992px,
+  lg: 1200px
+);

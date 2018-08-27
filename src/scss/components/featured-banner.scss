@@ -4,9 +4,13 @@
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
-  height: 80vh;
-  max-height: 600px;
+  height: calc(100vh - 62px);
   z-index: 5;
+
+  @include respond-above(sm) {
+    height: 80vh;
+    max-height: 600px;
+  }
 
   &__title {
     padding: 3rem;
@@ -26,6 +30,10 @@
     bottom: 0;
     background-color: $black;
     color: $white;
+
+    @include respond-below(sm) {
+      display: none;
+    }
   }
 
   .icon {

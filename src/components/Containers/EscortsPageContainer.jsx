@@ -31,7 +31,7 @@ const EscortsPageContainer = ({ escorts }) => (
     <ProfileGrid
       title={
         <h2 className="page__subtitle">
-          <strong>Gatas Cabaret</strong> (from data)
+          <strong>Gatas</strong> Cabaret
         </h2>
       }
       items={escorts}

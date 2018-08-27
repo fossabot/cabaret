@@ -23,7 +23,7 @@ export default class ProfileGrid extends Component {
     title: undefined,
     xs: 6,
     sm: 4,
-    md: 2,
+    md: 3,
     lg: 2,
   }
 
@@ -35,11 +35,11 @@ export default class ProfileGrid extends Component {
   }
 
   renderProfiles = () => {
-    const { items, xs, sm, md, lg } = this.props
+    const { items, ...rest } = this.props
 
     return items.map((profile, index) => {
       return (
-        <Col className={`${classPrefix}__item`} xs={xs} sm={sm} md={md} lg={lg} key={index}>
+        <Col className={`${classPrefix}__item`} {...rest} key={index}>
           <Profile profile={profile} />
         </Col>
       )

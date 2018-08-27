@@ -16,13 +16,23 @@ export default class BannerWithProfiles extends Component {
   getSettings = () => {
     const responsive = [
       {
-        breakpoint: 992,
+        // Default
+        breakpoint: 9999,
+        settings: {
+          slidesToShow: 6,
+          slidesToScroll: 6,
+        },
+      },
+      {
+        // LG
+        breakpoint: 1200,
         settings: {
           slidesToShow: 5,
           slidesToScroll: 5,
         },
       },
       {
+        // MD
         breakpoint: 922,
         settings: {
           slidesToShow: 4,
@@ -30,6 +40,7 @@ export default class BannerWithProfiles extends Component {
         },
       },
       {
+        // SM
         breakpoint: 768,
         settings: {
           slidesToShow: 3,
@@ -37,7 +48,8 @@ export default class BannerWithProfiles extends Component {
         },
       },
       {
-        breakpoint: 480,
+        // XS
+        breakpoint: 576,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -53,8 +65,8 @@ export default class BannerWithProfiles extends Component {
       lazyLoad: true,
       arrows: true,
       dots: true,
-      slidesToShow: 5,
-      slidesToScroll: 5,
+      // slidesToShow: 3,
+      // slidesToScroll: 3,
       responsive,
     }
   }

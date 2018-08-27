@@ -25,9 +25,9 @@ export default class GalleryImages extends Component {
     <Row noGutters className="image-gallery">
       {images.map((img, currentImageIndex) => {
         return (
-          <Col xs={6} md={4} key={currentImageIndex}>
+          <Col xs={12} sm={6} md={4} key={currentImageIndex}>
             <a
-              className="image-gallery__cover"
+              className="image-gallery__cover d-none d-sm-block"
               href={img.src}
               title="name"
               onClick={(event) => {
@@ -38,6 +38,7 @@ export default class GalleryImages extends Component {
                 <Icon name="search" />
               </div>
             </a>
+            <img src={img.src} alt="Profile Name" className="d-block d-sm-none" />
           </Col>
         )
       })}
@@ -49,6 +50,7 @@ export default class GalleryImages extends Component {
       images={images}
       isOpen={this.state.isLightboxOpen}
       currentImage={this.state.currentImageIndex}
+      className="d-block d-sm-none"
       onClickPrev={() => {
         this.setState({ currentImageIndex: this.state.currentImageIndex - 1 })
       }}

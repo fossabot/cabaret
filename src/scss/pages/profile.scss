@@ -11,6 +11,10 @@
     display: flex;
     align-items: center;
     background-color: black;
+
+    @include respond-below(sm) {
+      display: none;
+    }
   }
 
   &__floating-icon {
