@@ -2,15 +2,14 @@ backend:
   name: git-gateway
   branch: master
 
-publish_mode: editorial_workflow
-
 media_folder: static/img
 public_folder: /img
 
 collections:
   - name: "shops"
     label: "Shop"
-    folder: "src/pages/shops"
+    # folder: "src/pages/shops"
+    folder: "shops"
     create: true
     slug: "{{name}}" # this will be filename
     fields:
@@ -19,3 +18,129 @@ collections:
       - {label: "Address", name: "address", widget: "string"}
       - {label: "Postcode", name: "postcode", widget: "string"}
       - {label: "Outcode", name: "outcode", widget: "string"}
+
+  - name: "cities"
+    label: "Cidades"
+    folder: "cities"
+    create: true
+    slug: "{{name}}" # this will be filename
+    fields:
+      - {label: "Nome", name: "name", widget: "string"}
+
+  - name: "profiles"
+    label: "Profiles"
+    folder: pf
+    create: true
+    slug: "{{name}}" # this will be filename
+    fields:
+      - label: "Nome"
+        name: "name"
+        widget: "string"
+
+      - label: "Titulo"
+        name: "title"
+        widget: "string"
+
+      - label: "Descrição"
+        name: "body"
+        widget: "markdown"
+
+      - label: "Whatsapp"
+        name: "whatsapp"
+        widget: "boolean"
+
+      - label: "Verificada"
+        name: "checked"
+        widget: "boolean"
+
+      - label: "VIP"
+        name: "vip"
+        widget: "boolean"
+
+      - label: "Social"
+        name: "social"
+        widget: "object"
+        fields:
+          - {label: "Twitter", name: "twitter", widget: "string" }
+          - {label: "Instagram", name: "instagram", widget: "string" }
+          - {label: "Website", name: "website", widget: "string" }
+
+      - label: "Cidade"
+        name: "city"
+        widget: "relation"
+        collection: "cities"
+        searchFields: ["name"]
+        searchFields: ["name"]
+        valueField: "name"
+
+      - label: "Cidades"
+        name: "cities"
+        widget: "list"
+        field: { label: "Cidade", name: "city", widget: "string" }
+
+      - label: "Locais"
+        name: "locales"
+        widget: "object"
+        fields:
+          - {label: "Motel", name: "motel", widget: "boolean" }
+          - {label: "Hotel", name: "hotel", widget: "boolean" }
+          - {label: "Lugar Proprio", name: "self", widget: "boolean" }
+
+      - label: "Perfil"
+        name: "profile"
+        widget: "object"
+        fields:
+          - {label: "Idade", name: "age", widget: "number" }
+          - {label: "Altura", name: "height", widget: "number" }
+          - {label: "Peso", name: "weight", widget: "number" }
+
+          - {label: "Busto", name: "bust", widget: "number" }
+          - {label: "Cintura", name: "waist", widget: "number" }
+          - {label: "Quadril", name: "hips", widget: "number" }
+          - {label: "Pés", name: "feet", widget: "number" }
+          - label: "Olhos", name: "eyes", widget: "string" }
+          - label: "Cabelo", name: "hair", widget: "string" }
+
+      - label: "Atende"
+        name: "meets"
+        widget: "object"
+        fields:
+          - {label: "Homens", name: "man", widget: "boolean", default: true }
+          - {label: "Mulheres", name: "woman", widget: "boolean" }
+          - {label: "Casais", name: "couples", widget: "boolean" }
+          - {label: "Grupos", name: "groups", widget: "boolean" }
+
+      - label: "Serviços"
+        name: "services"
+        widget: "object"
+        fields:
+          - {label: "Beijo", name: "kiss", widget: "boolean" }
+          - {label: "Oral", name: "blowjob", widget: "boolean" }
+          - {label: "Finaliza oral", name: "mouth", widget: "boolean" }
+          - {label: "Anal", name: "anal", widget: "boolean" }
+          - {label: "Dominação", name: "domination", widget: "boolean" }
+          - {label: "Inversão", name: "inversion", widget: "boolean" }
+          - {label: "Disponível para viagens", name: "travel", widget: "boolean" }
+          - {label: "Tem amigas", name: "friends", widget: "boolean" }
+
+      - label: "Pagamento"
+        name: "payment"
+        widget: "object"
+        fields:
+          - {label: "Dinheiro", name: "money", widget: "boolean", default: true }
+          - {label: "Cartão", name: "credit", widget: "boolean" }
+
+      - label: "Valores"
+        name: "prices"
+        widget: "object"
+        fields:
+          - {label: "1 Hora", name: "one", widget: "number",   valueType: "int" }
+          - {label: "2 Horas", name: "two", widget: "number",   valueType: "int" }
+          - {label: "Noite", name: "night", widget: "number",   valueType: "int" }
+
+      - label: "Fotos"
+        name: "gallery"
+        widget: "list"
+        fields:
+          - { label: "Foto", name: "photo", widget: "image" }
+          - { label: "URL", name: "url", widget: "string" }

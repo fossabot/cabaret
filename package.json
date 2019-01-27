@@ -20,6 +20,8 @@
     "gatsby-plugin-google-fonts": "^0.0.4",
     "gatsby-plugin-lodash": "^1.0.11",
     "gatsby-plugin-manifest": "^1.0.27",
+    "gatsby-plugin-netlify": "^2.0.7",
+    "gatsby-plugin-netlify-cms": "^3.0.10",
     "gatsby-plugin-nprogress": "^1.0.14",
     "gatsby-plugin-purify-css": "^2.2.1",
     "gatsby-plugin-react-helmet": "^2.0.8",

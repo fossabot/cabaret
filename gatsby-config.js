@@ -101,7 +101,7 @@ module.exports = {
         icon: './src/assets/images/logo.png', // This path is relative to the root of the site.
       },
     },
-    // 'gatsby-plugin-netlify-cms',
-    // 'gatsby-plugin-netlify'
+    'gatsby-plugin-netlify-cms',
+    // 'gatsby-plugin-netlify', // make sure to keep it last in the array
   ],
 }
