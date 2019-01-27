@@ -1,30 +1,29 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import { navigateTo } from 'gatsby-link';
-import { noop } from 'lodash';
-import cx from 'classnames';
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
+import { navigate } from 'gatsby'
+import { noop } from 'lodash'
+import cx from 'classnames'
 
 export default class Link extends Component {
+  handleClick = (event) => {
+    const { onClick = noop, to, target = null } = this.props
 
-  handleClick = event => {
-    const { onClick = noop, to, target = null } = this.props;
-
-    onClick(event);
+    onClick(event)
 
     if (!event.defaultPrevented && !target) {
-      navigateTo(to);
+      navigate(to)
     }
   }
 
   render() {
-    const { children, to, className = null } = this.props;
+    const { children, to, className = null } = this.props
 
     const linkClassNames = cx('link', className)
     return (
       <a href={to} className={linkClassNames} onClick={this.handleClick}>
         {children}
       </a>
-    );
+    )
   }
 }
 
@@ -34,4 +33,4 @@ Link.propTypes = {
   onClick: PropTypes.func,
   className: PropTypes.string,
   target: PropTypes.string,
-};
+}

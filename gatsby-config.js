@@ -2,16 +2,15 @@ module.exports = {
   siteMetadata: {
     title: 'Cabare Club',
     siteUrl: 'https://cabareclub.com.br',
-    launchDate: process.env.APP_LAUNCH_DATE || '2018-10-1',
+    launchDate: process.env.APP_LAUNCH_DATE || '2019-6-4',
   },
-  // pathPrefix: '/',
   plugins: [
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sass',
     // 'gatsby-plugin-purify-css',
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
-    'gatsby-plugin-react-next',
+    // 'gatsby-plugin-react-next',
     'gatsby-plugin-lodash',
     'gatsby-plugin-catch-links',
     'gatsby-plugin-sitemap',
@@ -101,7 +100,7 @@ module.exports = {
         icon: './src/assets/images/logo.png', // This path is relative to the root of the site.
       },
     },
-    'gatsby-plugin-netlify-cms',
+    // 'gatsby-plugin-netlify-cms',
     // 'gatsby-plugin-netlify', // make sure to keep it last in the array
   ],
 }

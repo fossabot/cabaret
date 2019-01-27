@@ -1,12 +1,18 @@
 import React from 'react'
+import { graphql } from 'gatsby'
 
-import LandingPageContainer from '../components/Containers/LandingPageContainer';
+import Layout from '../components/Layout'
+import LandingPageContainer from '../components/Containers/LandingPageContainer'
 
-const IndexPage = ({ data: { site: { siteMetadata: metadata } } }) => (
-  <div>
+const IndexPage = ({
+  data: {
+    site: { siteMetadata: metadata },
+  },
+}) => (
+  <Layout noHeader>
     <LandingPageContainer metadata={metadata} />
-  </div>
-);
+  </Layout>
+)
 
 export const query = graphql`
   query LaunchDateQuery {

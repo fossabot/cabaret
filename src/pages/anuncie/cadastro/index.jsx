@@ -1,29 +1,31 @@
-import React from 'react';
-import { Grid, Row, Col } from '../../../components/Elements/Grid';
-import Page from '../../../components/Elements/Page/Page';
-import TitleAndMetaTags from '../../../components/TitleAndMetaTags';
-import { JoinForm } from '../../../components/Forms/JoinUsForm';
+import React from 'react'
+import { Grid, Row, Col } from '../../../components/Elements/Grid'
+import Page from '../../../components/Elements/Page/Page'
+import TitleAndMetaTags from '../../../components/TitleAndMetaTags'
+import { JoinForm } from '../../../components/Forms/JoinUsForm'
+import Layout from '../../../components/Layout'
 
 const JoinUs = () => (
-  <Page className="join-us-page">
-    <TitleAndMetaTags title="Cadastro de Acompanhante" />
+  <Layout>
+    <Page className="join-us-page">
+      <TitleAndMetaTags title="Cadastro de Acompanhante" />
 
-    <Grid>
-      <Row className="justify-content-sm-center">
-        <Col md={8}>
-          <iframe
-            src="https://docs.google.com/forms/d/e/1FAIpQLScr-R-ZmJIPW54tkH5G6PWldVdVyiFxLkEMONhkVO9ixqm9nw/viewform?embedded=true"
-            width="100%"
-            height="1200"
-            frameborder="0"
-            marginheight="0"
-            marginwidth="0"
-          />
-        </Col>
-      </Row>
-    </Grid>
+      <Grid>
+        <Row className="justify-content-sm-center">
+          <Col md={8}>
+            <iframe
+              src="https://docs.google.com/forms/d/e/1FAIpQLScr-R-ZmJIPW54tkH5G6PWldVdVyiFxLkEMONhkVO9ixqm9nw/viewform?embedded=true"
+              width="100%"
+              height="1200"
+              frameborder="0"
+              marginheight="0"
+              marginwidth="0"
+            />
+          </Col>
+        </Row>
+      </Grid>
 
-    {/*<Grid>
+      {/*<Grid>
       <Row className="justify-content-sm-center">
       <Col md={6}>
 
@@ -67,7 +69,8 @@ const JoinUs = () => (
         </Col>
       </Row>
     </Grid>*/}
-  </Page>
+    </Page>
+  </Layout>
 )
 
 export default JoinUs

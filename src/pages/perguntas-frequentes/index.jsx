@@ -6,9 +6,10 @@ import { Grid, Row, Col } from '../../components/Elements/Grid'
 import Collapse from '../../components/Elements/Collapse/Collapse'
 
 import FAQ_SECTIONS from '../../utils/getFaqSections'
+import Layout from '../../components/Layout'
 
 const Faq = () => (
-  <div>
+  <Layout>
     <Helmet
       lang="pt-br"
       title="Perguntas Frequentes - Cabaret Acompanhantes SP - Acompanhantes São Paulo"
@@ -26,7 +27,7 @@ const Faq = () => (
         />
       ))}
     </Page>
-  </div>
+  </Layout>
 )
 
 export default Faq

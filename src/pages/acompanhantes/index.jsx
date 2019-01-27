@@ -1,6 +1,8 @@
 import React from 'react'
+import { graphql } from 'gatsby'
 
 import EscortsPageContainer from '../../components/Containers/EscortsPageContainer'
+import Layout from '../../components/Layout'
 
 const MapData = (data) => {
   const {
@@ -24,7 +26,11 @@ const MapData = (data) => {
   })
 }
 
-const Acompanhantes = ({ data }) => <EscortsPageContainer escorts={MapData(data)} />
+const Acompanhantes = ({ data = {} }) => (
+  <Layout>
+    <EscortsPageContainer escorts={MapData(data)} />
+  </Layout>
+)
 
 export default Acompanhantes
 
