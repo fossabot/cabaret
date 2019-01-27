@@ -1,6 +1,5 @@
 backend:
   name: git-gateway
-  branch: master
 
 media_folder: static/img
 public_folder: /img
@@ -70,7 +69,6 @@ collections:
         widget: "relation"
         collection: "cities"
         searchFields: ["name"]
-        searchFields: ["name"]
         valueField: "name"
 
       - label: "Cidades"
@@ -98,8 +96,8 @@ collections:
           - {label: "Cintura", name: "waist", widget: "number" }
           - {label: "Quadril", name: "hips", widget: "number" }
           - {label: "Pés", name: "feet", widget: "number" }
-          - label: "Olhos", name: "eyes", widget: "string" }
-          - label: "Cabelo", name: "hair", widget: "string" }
+          - {label: "Olhos", name: "eyes", widget: "string" }
+          - {label: "Cabelo", name: "hair", widget: "string" }
 
       - label: "Atende"
         name: "meets"
