@@ -5,39 +5,39 @@ import './styles.scss'
 
 const models = [
   {
-    name: 'Juliana Saad',
+    name: 'Isis Souza',
     location: 'São Paulo',
-    img: '/img/acompanhantes/juliana-saad.jpg',
+    img: '/img/acompanhantes/isis-souza.png',
     link: 'https://twitter.com/Julianasaad8',
   },
   {
-    name: 'Kamilinha',
+    name: 'Lara Paes',
     location: 'São Paulo',
-    img: '/img/acompanhantes/kamilinha.jpg',
+    img: '/img/acompanhantes/lara-paes.png',
     link: 'https://twitter.com/KamilaPimenta69',
   },
   {
-    name: 'Julia Faria',
+    name: 'Mariana Rodrigues',
     location: 'São Paulo',
-    img: '/img/acompanhantes/julia-faria.jpg',
+    img: '/img/acompanhantes/mariana-rodrigues.png',
     link: 'https://twitter.com/juliafariaGP',
   },
   {
-    name: 'Laila Ribeiro',
+    name: 'Tais Rodrigues',
     location: 'São Paulo',
-    img: '/img/acompanhantes/laila-ribeiro.jpg',
+    img: '/img/acompanhantes/tais-rodrigues.png',
     link: 'https://twitter.com/lailaribeiro111',
   },
   {
-    name: 'Athena',
+    name: 'Mayumi Sato',
     location: 'São Paulo',
-    img: '/img/acompanhantes/athena.jpg',
+    img: '/img/acompanhantes/mayumi-sato.png',
     link: 'https://twitter.com/athena_jardins',
   },
   {
-    name: 'Yumi Inoue',
+    name: 'Susana Joy',
     location: 'São Paulo',
-    img: '/img/acompanhantes/yumi-inoue.jpg',
+    img: '/img/acompanhantes/susana-joy.png',
     link: 'https://twitter.com/yumiinouejapa',
   },
 ]
