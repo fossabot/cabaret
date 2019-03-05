@@ -21,7 +21,7 @@ const BannerSection = ({ datetime }) => (
           <h2 className="brand__subtitle text-hide">Onde as calcinhas ficam no chão</h2>
         </Col>
         <Col md={12} className="align-self-center">
-          <Countdown datetime={datetime} />
+          <Countdown date={datetime} />
         </Col>
         <Col md={6} className="align-self-end text-center">
           <Link to={'#about'}>

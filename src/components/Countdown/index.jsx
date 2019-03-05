@@ -1,116 +1,97 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
-class Countdown extends Component {
-
-  static propTypes = {
-    datetime: PropTypes.string
-  }
-
-  isCancelled = false;
-
+export default class Countdown extends Component {
   constructor(props) {
-    super(props);
+    super(props)
 
     this.state = {
       days: 0,
       hours: 0,
       minutes: 0,
       seconds: 0,
-    };
-
-    this.updateTimer();
+    }
   }
 
-  componentDidUpdate () {
-    this.updateTimer();
+  componentDidMount() {
+    // update every second
+    this.interval = setInterval(() => {
+      const date = this.getCurrentCountdown(this.props.date)
+      date ? this.setState(date) : this.stop()
+    }, 1000)
   }
 
-  componentWillUnmount () {
-    this.isCancelled = true;
+  componentWillUnmount() {
+    this.stop()
   }
 
-
-  updateTimer = () => {
-    if (this.isCancelled) return;
-
-    setTimeout(() => {
-      this.setState(this.getCurrentCountdown);
-    }, 1000);
+  stop() {
+    clearInterval(this.interval)
   }
 
-  getCurrentCountdown = () => {
-    const { datetime } = this.props;
+  getCurrentCountdown = (date) => {
+    let diff = (Date.parse(new Date(date)) - Date.parse(new Date())) / 1000
 
-    const countDownDate = new Date(datetime);
+    // clear countdown when date is reached
+    if (diff <= 0) return false
 
-    const now = new Date();
+    const timeLeft = {
+      days: 0,
+      hours: 0,
+      minutes: 0,
+      seconds: 0,
+    }
 
-    const distance = countDownDate - now;
+    // calculate time difference between now and expected date
+    if (diff >= 86400) {
+      // 24 * 60 * 60
+      timeLeft.days = Math.floor(diff / 86400)
+      diff -= timeLeft.days * 86400
+    }
+    if (diff >= 3600) {
+      // 60 * 60
+      timeLeft.hours = Math.floor(diff / 3600)
+      diff -= timeLeft.hours * 3600
+    }
+    if (diff >= 60) {
+      timeLeft.minutes = Math.floor(diff / 60)
+      diff -= timeLeft.minutes * 60
+    }
+    timeLeft.seconds = diff
 
-    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-    return {
-      days,
-      hours,
-      minutes,
-      seconds
-    };
-  }
-
-  renderDays = () => {
-    const { days } = this.state;
-    return (
-      <span className="countdown__colum">
-        <span className="countdown__amount">{days}</span>
-        <span className="countdown__period">Dias</span>
-      </span>
-    );
-  }
-
-  renderHours = () => {
-    const { hours } = this.state;
-    return (
-      <span className="countdown__colum">
-        <span className="countdown__amount">{hours}</span>
-        <span className="countdown__period">Horas</span>
-      </span>
-    );
-  }
-
-  renderMinutes = () => {
-    const { minutes } = this.state;
-    return (
-      <span className="countdown__colum">
-        <span className="countdown__amount">{minutes}</span>
-        <span className="countdown__period">Minutos</span>
-      </span>
-    );
-  }
-
-  renderSeconds = () => {
-    const { seconds } = this.state;
-    return (
-      <span className="countdown__colum">
-        <span className="countdown__amount">{this.state.seconds}</span>
-        <span className="countdown__period">Segundos</span>
-      </span>
-    );
+    return timeLeft
   }
 
   render() {
+    const { days, hours, minutes, seconds } = this.state
+
     return (
       <div className="countdown">
-        {this.renderDays()}
-        {this.renderHours()}
-        {this.renderMinutes()}
-        {this.renderSeconds()}
+        <span className="countdown__colum">
+          <span className="countdown__amount">{days}</span>
+          <span className="countdown__period">Dias</span>
+        </span>
+        <span className="countdown__colum">
+          <span className="countdown__amount">{hours}</span>
+          <span className="countdown__period">Horas</span>
+        </span>
+        <span className="countdown__colum">
+          <span className="countdown__amount">{minutes}</span>
+          <span className="countdown__period">Minutos</span>
+        </span>
+        <span className="countdown__colum">
+          <span className="countdown__amount">{seconds}</span>
+          <span className="countdown__period">Segundos</span>
+        </span>
       </div>
     )
   }
 }
 
-export default Countdown
+Countdown.propTypes = {
+  date: PropTypes.string.isRequired,
+}
+
+Countdown.defaultProps = {
+  date: new Date(),
+}
