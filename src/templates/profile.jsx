@@ -32,11 +32,10 @@ class ProfilePage extends Component {
     ))
   }
 
-  renderSocialNetwork = (data) => {
-    const { social } = data
-    console.log('renderSocialNetwork', social)
-    return null
-  }
+  // renderSocialNetwork = (data) => {
+  //   const { social } = data
+  //   return null
+  // }
 
   renderProfile = (data) => {
     const { profile } = data
@@ -100,7 +99,6 @@ class ProfilePage extends Component {
 
   renderPricesAndPayments = (data) => {
     const { prices, payment } = data
-    console.log('renderPricesAndPayments', prices, payment)
     const list = {}
 
     list.prices = Object.entries(prices)
@@ -131,11 +129,11 @@ class ProfilePage extends Component {
 
   render() {
     const {
+      // eslint-disable-next-line react/prop-types
       data: {
         markdownRemark: { html: description, frontmatter: profile },
       },
     } = this.props
-    // console.log(profile)
 
     return (
       <Layout>

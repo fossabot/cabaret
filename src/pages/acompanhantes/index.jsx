@@ -9,7 +9,6 @@ const MapData = (data) => {
     allMarkdownRemark: { edges },
   } = data
   return edges.map((nodes) => {
-    console.log(nodes)
     const {
       node: {
         frontmatter,

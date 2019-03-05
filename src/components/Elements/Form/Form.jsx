@@ -26,7 +26,6 @@ export default class Form extends Component {
 
     const form = e.target
     e.preventDefault()
-    console.log(form, this.state)
 
     // return;
     fetch(url, {
@@ -44,10 +43,10 @@ export default class Form extends Component {
   }
 
   render() {
-    const { children = null, ...rest } = this.props
+    const { children = null, name, ...rest } = this.props
 
     return (
-      <form onSubmit={this.handleSubmit} {...rest}>
+      <form name={name} onSubmit={this.handleSubmit} {...rest}>
         {children}
       </form>
     )
