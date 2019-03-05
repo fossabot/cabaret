@@ -11,5 +11,9 @@
   "parser": "babel-eslint",
   "rules": {
     "relay/graphql-naming": 0
+  },
+  "env": {
+    "browser": true,
+    "node": true
   }
 }
